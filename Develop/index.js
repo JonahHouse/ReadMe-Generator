@@ -95,8 +95,7 @@ function init() {
     .then(answer => {
         
         // Storing GitHub username
-        let username = answer.username
-        console.log(username)
+        let username = answer.username;
 
         // Getting GitHub email and avatar
         axios({
@@ -117,7 +116,6 @@ function init() {
 
             // Storing GitHub email
             email = data.email;
-            console.log(email);
 
         });
 
@@ -154,7 +152,6 @@ function init() {
             
             // Stores which repo they want to write a ReadMe for
             let repo = answer.repo;
-            // console.log(repo)
 
             // Get info on repo
             axios({
@@ -184,7 +181,6 @@ function init() {
                             answers.push(answer);
                             num++;
                             askQuestions(num);
-                            console.log(answers)
 
                         })
                         .catch(error => console.log(error));
@@ -236,7 +232,7 @@ ${answers[5].contributing}
 ---------------------------------------
 ![profile pic](${avatar} "${username}")
 
-Please send any inquiries to me through GitHub![${username}](https://github.com/${username})
+Please send any inquiries to me through GitHub!(https://github.com/${username})
 ---------------------------------------
 Created by ${username} 2020
 `;
